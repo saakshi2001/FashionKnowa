@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=12.0, minimum-scale=1, user-scalable=yes"
+    />
+
+    <link rel="icon" href="../static/img/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <title>FashionKnowa</title>
+    <script>
+      function toggleMobileNavigation() {
+        var element = document.getElementById("mobile-navigation");
+
+        if (element.classList.contains("mobile-navigation__open")) {
+          element.classList.remove("mobile-navigation__open");
+        } else {
+          element.classList.add("mobile-navigation__open");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="mobile-navigation" id="mobile-navigation">
+      <div class="mobile-navigation--header">
+        <img src="../static/img/logo.jpg" alt="" />
+
+        <div class="close-button" onclick="toggleMobileNavigation()">
+          <button>
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+      </div>
+
+      <a href="{{ url_for('upload_form')}}" class="mobile-navigation--item"
+        >Home</a
+      >
+      <a href="{{ url_for('about')}}" class="mobile-navigation--item">About</a>
+    </div>
+    <div id="container">
+      <header>
+        <a class="logo" href="{{ url_for('upload_form')}}"><img src="../static/img/logo.jpg" alt=""/></a>
+
+        <nav class="navigation">
+          <a href="{{ url_for('upload_form')}}" class="navigation--item"
+            >Home</a
+          >
+          <a href="{{ url_for('about')}}" class="navigation--item">About</a>
+        </nav>
+
+        <div class="menu--button" onclick="toggleMobileNavigation()">
+          <button>
+            <i class="fa fa-reorder"></i>
+          </button>
+        </div>
+
+        <a class="navigation--button" href="">Why?</a>
+      </header>
+      <main class="why--main">
+      <h1 class="important">What is Sustainability?</h1>
+       <p class="why--content">
+           <a href="#" class="why-highlights">“Treat the Earth well. It was not given to you by your parents. It was loaned to you by your children.”</a> This Kenyan proverb aptly marks the pungent need of the hour, which is Sustainable development and conservation of the ecosystem.
+One of the best ways to conserve the ecosystem would be to have an eco-friendly living style. In other words  ‘Going green’ is the latest way of life.<br />
+Sustainability has also arrived in the textile industry.<br />
+You will find that “sustainable fabrics” is a term often used to group together various environmentally friendly materials, and several fabrics have garnered the "sustainable" label for different reasons. But just as sustainability is a moving target, so are fabrics—and no one fabric can do it all. We hope that through responsible production and environmentally growing practices, better fabrics can help to create a more transparent fashion industry.<br />
+If you dig down a little deeper, sustainable fashion is also about benefiting the people involved throughout the fashion supply chain – from farmers to consumers to everyone working in end-of-life facilities such as recycling factories.
+
+      </p>
+      <div class="images">
+				<img src="../static/img/infographic.webp" alt="" id="image" />
+				<img src="../static/img/slowfashion.jpg" alt="" id="image" />
+        </div>
+          <h1>Why is it so important?</h1> Fashion has such a significant impact on communities around the world. It also has a huge climate change footprint, and if we’re going to tackle the existential threat of climate change, the fashion industry needs to urgently address its unsustainable practices.<br /> If we don’t start to address the negative impacts of the fashion industry soon, we’re not going to have an industry in the future. The fashion industry is one of the largest polluting industries in the world.<br /> Conscious fashion can mean many different things, but one way to ensure a more mindful purchase is to shop for sustainably made garments. With fast fashion producing at a highly accelerated rate to meet demand, manufacturers end up relying on virgin synthetic materials that are cheap and quick to produce. However, these fabrics (like polyester), take decades or more to biodegrade.<br />
+Another factor to consider when shopping sustainably is that some fabrics will have a longer lifespan than others. The most optimal choice for you will be the one that will allow you to waste less, purchase fewer, and wear your items for longer. It’s time to take a closer look at our clothing labels now.
+      <main>
+      <footer>
+        <div class="social">
+          <a
+            href="https://github.com/aditirao7/shellhacks"
+            target="_blank"
+            class="socials--item"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+
+        <a href="https://shellhacks.net/" target=”_blank”>Built @ ShellHacks</a>
+      </footer>
+    </div>
+  </body>
+</html>
